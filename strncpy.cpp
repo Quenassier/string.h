@@ -18,3 +18,17 @@ char* my_strncpy(char* dest, const char* src, size_t n) {
 
     return originalDest;
 }
+
+int main() {
+    char dest[10];
+    const char* src = "Hello, world!";
+    size_t n = 5; 
+
+    char* result = my_strncpy(dest, src, n);
+    result[n] = '\0'; 
+
+    std::cout << "Копированная строка: " << result << std::endl;
+
+    return 0;
+}
+
