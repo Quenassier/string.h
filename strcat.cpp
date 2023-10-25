@@ -1,13 +1,17 @@
 #include <iostream>
 
-char* strcat(char* dest, const char* src);
+char* strcat(char* dest, const char* src) {
+    char* ptr = dest;
 
-int main() {
-    char str1[100] = "Hello";
-    const char* str2 = "World!";
+    while (*ptr) {
+        ptr++;
+    }
 
-    strcat(str1, str2);
+    while (*src) {
+        *ptr++ = *src++;
+    }
 
-    std::cout << str1 << std::endl;
-    return 0;
+    *ptr = '\0';
+
+    return dest;
 }
