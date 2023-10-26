@@ -1,9 +1,7 @@
 #include <iostream>
 
 const char* my_strstr(const char* haystack, const char* needle) {
-    if (!haystack || !needle) {
-        return nullptr;
-    }
+    if (!haystack || !needle) }
 
     for (int i = 0; haystack[i] != '\0'; i++) {
         int j = 0;
@@ -14,9 +12,8 @@ const char* my_strstr(const char* haystack, const char* needle) {
         if (needle[j] == '\0') {
             return &haystack[i];
         }
-    }
+    
 
-    return nullptr;
 }
 
 int main() {
